@@ -21,11 +21,8 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_second, container, false);
-        view.findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(getView()).navigate(R.id.action_secondFragment_to_firstFragment);
-            }
+        view.findViewById(R.id.btn2).setOnClickListener(view1 -> {
+            Navigation.findNavController(getView()).navigate(R.id.action_secondFragment_to_firstFragment);
         });
         return view;
     }
